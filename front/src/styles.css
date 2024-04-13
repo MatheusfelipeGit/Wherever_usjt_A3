@@ -1,0 +1,86 @@
+/* Estilo para a divisão da página */
+.container {
+    display: flex;
+    height: 100vh; /* altura total da tela */
+  }
+  
+  /* Estilo para o lado esquerdo */
+  .left-side {
+    flex: 0 0 35%; /* Flex basis de 35%, não pode crescer nem encolher */
+    background-color: #ffffff; /* Cor de fundo do lado esquerdo */
+    padding: 16px;
+    height: 100%; /* altura total da tela */
+    
+  }
+  
+  /* Estilo para o lado direito */
+  .right-side {
+    flex: 0 0 65%; /* Flex basis de 65%, não pode crescer nem encolher */
+    background-color: #434BE7; /* Cor de fundo do lado direito */
+    padding: 99px;
+    height: 100%; /* altura total da tela */
+  }
+  .img-container {
+    width: 50%; /* largura do contêiner */
+  }
+  
+  img  {
+    width: 85%; /* largura da imagem igual à largura do contêiner */
+    height: auto; /* altura automática para manter a proporção original */
+    margin-top: 60px; /* Ajusta a margem superior para mover a imagem para baixo */
+    position: relative; /* Define a posição como relativa */
+    left: 35px; /* Move a imagem 50 pixels para a direita */
+  }
+
+  .container img:nth-child(2) {
+    /* Estilos para a segunda imagem */
+    width: 50%; /* largura da imagem igual à largura do contêiner */
+    height: auto; /* altura automática para manter a proporção original */
+    margin-top: 10px; /* Ajusta a margem superior para mover a imagem para baixo */
+    position: relative; /* Define a posição como relativa */
+    left: 80px; /* Move a imagem 50 pixels para a direita */
+  }
+  
+  h2 {
+    /* Estilos para todos os elementos h2 */
+    font-size: 24px; /* Define o tamanho da fonte */
+    color: #000000; /* Define a cor do texto */
+    margin-top: 35px; /* Ajusta a margem superior para mover o texto para baixo */
+    /* Outros estilos desejados */
+  }
+
+  body {
+    width: 100vw; /* Define a largura da página como 100% da largura da janela do navegador */
+    height: 100vh; /* Define a altura da página como 100% da altura da janela do navegador */
+    overflow: hidden; /* Esconde a barra de rolagem */
+  }
+ /* Estilo para os atalhos */
+.atalhos {
+    position: fixed; /* Fixa os atalhos na parte superior da janela */
+    top: 25px; /* Distância do topo da janela */
+    right: 10px; /* Distância da direita da janela */
+    z-index: 9999; /* Z-index para garantir que os atalhos fiquem acima do conteúdo */
+  }
+  
+  .atalhos button {
+    margin-right: 70px;
+    padding: 2px;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+    font-family:Georgia, 'Times New Roman', Times, serif; /* Altera a fonte para Arial ou a fonte padrão sans-serif */
+  }
+  .atalhos button:hover{
+    color: white;
+    transition: 0.3s;
+  }
+  /* Estilo para o parágrafo */
+.paragrafo {
+    font-size: 15px; /* Define o tamanho do texto para 16 pixels */
+    line-height: 1.6; /* Define o espaçamento entre as linhas para 1.2 vezes o tamanho da fonte */
+    max-width: 400px; /* Define a largura máxima do parágrafo */
+    margin-top: 30px; /* Ajusta a margem superior para mover o texto para baixo */
+
+  }

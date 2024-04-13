@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sua Página</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo CSS externo -->
+</head>
+<body>
+  <div class="container">
+    <!-- Lado esquerdo com a logo -->
+    <div class="left-side">
+      <img src="Original sobre transparência.png" alt="Imagem 1">
+      <img src="Globo2.png" alt="Imagem 2">
+    </div>
+    
+    <!-- Lado direito com informações -->
+    <div class="right-side">
+      <p class="paragrafo">Prepare-se para uma jornada emocionante de descobertas com o Wherever. Seja bares aconchegantes, restaurantes requintados, baladas vibrantes ou rooftops com vistas deslumbrantes, tudo está ao seu alcance com apenas um toque. Defina seu raio de busca e deixe-nos revelar os tesouros escondidos ao seu redor. Uma vez encontrado o local perfeito, mergulhe em avaliações detalhadas, acessibilidades e características exclusivas. Sua próxima aventura está esperando por você. Explore o mundo ao seu redor agora mesmo com o Wherever!</p>
+    </div>
+  </div>
+
+  <!-- Lado direito com atalhos -->
+  <div class="right-side">
+    <div class="atalhos">
+      <button onclick="location.href='#home-section'">Home</button>
+      <button onclick="location.href='#about-us-section'">Sobre Nós</button>
+      <button onclick="location.href='#what-is-wherever-section'">O que é o Wherever?</button>
+    </div>
+  </div>
+
+  <!-- Espaço para renderizar a aplicação React -->
+  <div id="root"></div>
+
+  <!-- Importa as bibliotecas React e ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- Importa o arquivo JavaScript principal da sua aplicação -->
+  <script src="App.js"></script>
+
+  <!-- Importa os componentes React que você criou -->
+  <script src="Home.js"></script>
+  <script src="AboutUs.js"></script>
+  <script src="WhatIsWherever.js"></script>
+  <script src="Navigation.js"></script>
+
+  <!-- Adicione um ID para cada seção que será alvo dos botões de navegação -->
+  <div id="home-section"><Home /></div>
+  <div id="about-us-section"><AboutUs /></div>
+  <div id="what-is-wherever-section"><WhatIsWherever /></div>
+</body>
+</html>
