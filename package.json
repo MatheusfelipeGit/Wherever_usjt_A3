@@ -1,0 +1,15 @@
+{
+  "name": "wherever_usjt_a3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node C:/Program Files (x86)/NVIDIA Corporation/NvNode/node_modules/engine.io/lib",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "description": ""
+}

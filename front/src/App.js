@@ -1,7 +1,6 @@
 import React from "react";
-import Aboutus from "./HomePages/Aboutus";
-import Home from "./HomePages/Home";
-import Whatiswherever from "./HomePages/Whatiswherever";
+import Aboutus from "./front/src/Aboutus";
+import Whatiswherever from "./front/src/Whatiswherever";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
