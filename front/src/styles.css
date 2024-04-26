@@ -1,68 +1,75 @@
 /* Estilo para a divisão da página */
 .container {
   display: flex;
-  height: 100vh; /* altura total da tela */
+  min-height: 100vh; /* Alterado para altura mínima de 100% da altura da viewport */
 }
 
 /* Estilo para o lado esquerdo */
 .left-side {
-  flex: 0 0 35%; /* Flex basis de 35%, não pode crescer nem encolher */
-  background-color: #ffffff; /* Cor de fundo do lado esquerdo */
+  flex: 0 0 70vh;
+  background-color: #ffffff;
   padding: 16px;
-  height: 254%; /* altura total da tela */
-  
 }
 
 /* Estilo para o lado direito */
 .right-side {
-  flex: 0 0 65%; /* Flex basis de 65%, não pode crescer nem encolher */
-  background-color: #434BE7; /* Cor de fundo do lado direito */
+  flex: 0 0 100vh;
+  background-color: #434BE7;
   padding: 99px;
-  height: 180%; /* altura total da tela */
 }
+
 .img-container {
-  width: 50%; /* largura do contêiner */
+  width: 50%;
 }
 
 img  {
-  position: fixed; /* Define a posição fixa */
-  top: 30px; /* Ajusta a distância do topo da janela */
-  left: 50px; /* Ajusta a distância da esquerda da janela */
-  width: 315px; /* Define a largura desejada */
-  height: auto; /* Mantém a proporção original da imagem */
+  position: fixed;
+  top: 10px;
+  left: 50px;
+  width: 315px;
+  margin-top: 50px;
 }
 
-.container img:nth-child(2) {
-  position: fixed; /* Define a posição fixa */
-  top: 50px; /* Ajusta a distância do topo da janela */
-  left: 90px; /* Ajusta a distância da esquerda da janela */
-  margin-top: 100px;
-  width: 200px; /* Define a largura desejada */
+.footer-image img {
   height: auto; /* Mantém a proporção original da imagem */
+  top: 200px;
+  left: 800px;
+  width: 200px;
+  margin-top: 210px;
+}
+
+
+.container img:nth-child(2) {
+  position: fixed;
+  top: 50px;
+  left: 90px;
+  margin-top: 100px;
+  width: 200px;
+  height: auto;
 }
 
 h2 {
-  /* Estilos para todos os elementos h2 */
-  font-size: 24px; /* Define o tamanho da fonte */
-  color: #000000; /* Define a cor do texto */
-  margin-top: 35px; /* Ajusta a margem superior para mover o texto para baixo */
-  /* Outros estilos desejados */
+  font-size: 24px;
+  color: #000000;
+  margin-top: 35px;
 }
 
 body {
-  width: 100vw; /* Define a largura da página como 100% da largura da janela do navegador */
-  height: 100vh; /* Define a altura da página como 100% da altura da janela do navegador */
-  min-height: 120vh; /* Define uma altura mínima de 120% da altura da janela do navegador */
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  overflow-x: hidden; /* Esconde apenas a barra de rolagem horizontal */
 }
 
 /* Estilo para os atalhos */
 .atalhos {
-  position: absolute; /* Posiciona os botões em relação ao elemento pai */
-  top: 40px; /* Define a distância do topo do elemento pai */
-  right: 75px; /* Define a distância da direita do elemento pai */
+  position: absolute;
+  top: 40px;
+  right: 75px;
 }
 
 .atalhos button {
+
   margin-right: 70px;
   padding: 2px;
   border: none;
@@ -70,42 +77,49 @@ body {
   font-size: 18px;
   color: #000000;
   cursor: pointer;
-  font-family:Georgia, 'Times New Roman', Times, serif; /* Altera a fonte para Arial ou a fonte padrão sans-serif */
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 .atalhos button:hover{
   color: white;
   transition: 0.3s;
 }
+
 /* Estilo para o parágrafo */
 .paragrafo {
-  font-size: 15px; /* Define o tamanho do texto para 16 pixels */
-  line-height: 1.6; /* Define o espaçamento entre as linhas para 1.2 vezes o tamanho da fonte */
-  max-width: 400px; /* Define a largura máxima do parágrafo */
-  margin-top: 30px; /* Ajusta a margem superior para mover o texto para baixo */
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 400px;
+  margin-top: 30px;
+  color: #000000; /* Adicionado para garantir a cor do texto */
 }
 
 /* Estilo para o título "Como a Wherever pode te ajudar?" */
 .right-side h1 {
-  font-size: 24px; /* Define o tamanho da fonte */
-  color: #000000; /* Cor do texto */
-  margin-bottom: 10px; /* Espaçamento abaixo do título */
-}
-
-/* Estilo para a seção "Quem nós somos" */
-.quemsomos-section {
-  padding-top: 350px; /* Espaço acima do conteúdo */
+  font-size: 24px;
+  color: #000000; /* Alterado para a cor do texto ser branca */
+  margin-bottom: 10px;
+  margin-top: 35px; /* Ajustando a altura do elemento */
 }
 
 /* Estilo para o título "Quem nós somos, afinal?" */
 .quemsomos-title {
-  font-size: 24px; /* Define o tamanho da fonte */
-  color: #000000; /* Cor do texto */
+  font-size: 24px;
+  color: #000000; /* Alterado para a cor do texto ser branca */
+}
+
+/* Estilo para a seção "Quem nós somos" */
+.quemsomos-section {
+  padding-top: 50px; /* Ajustado conforme necessário */
+  margin-top: 180px; /* Ajustando a altura do elemento */
 }
 
 /* Estilo para o parágrafo "Quem nós somos, afinal?" */
 .quemsomos {
-  font-size: 15px; /* Define o tamanho do texto */
-  line-height: 1.6; /* Define o espaçamento entre as linhas */
-  max-width: 400px; /* Define a largura máxima do parágrafo */
-  margin-top: 30px; /* Ajusta a margem superior */
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 400px;
+  margin-top: 30px;
+  color: #000000; /* Alterado para a cor do texto ser branca */
 }
+

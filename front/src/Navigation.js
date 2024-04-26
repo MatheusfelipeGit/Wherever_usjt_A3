@@ -10,7 +10,6 @@ function Navigation() {
 
   return (
     <div className="atalhos">
-      <button onClick={() => scrollToSection('home-section')}>Home</button>
       <button onClick={() => scrollToSection('about-us-section')}>Sobre Nós</button>
       <button onClick={() => scrollToSection('what-is-wherever-section')}>O que é o Wherever?</button>
     </div>

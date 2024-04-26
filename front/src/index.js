@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Home(){
+export default function index(){
     return(
         <section>
             <h2>Testando</h2>
