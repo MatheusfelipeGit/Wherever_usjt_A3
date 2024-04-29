@@ -6,4 +6,4 @@ Marcos Paulo - RA 823144538 - marcosz.hotflow2018@gmail.com
 
 Felipe Souza - RA 823161016 - 00001101730869sp@al.educacao.so.gov.br
 
-Matheus Felipe - RA 823117058 - mfelipeleite8@gmail.com
+Matheus Felipe Leite - RA 823117058 - mfelipeleite8@gmail.com
