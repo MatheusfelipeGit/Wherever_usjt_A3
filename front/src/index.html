@@ -7,35 +7,48 @@
   <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo CSS externo -->
 </head>
 <body>
+  <!-- Container principal -->
   <div class="container">
+  
     <!-- Lado esquerdo com a logo -->
     <div class="left-side">
       <img src="Original sobre transparência.png" alt="Imagem 1">
-      <img src="Globo2.png" alt="Imagem 2">
+      <img src="Globo2.png" alt="Imagem 2" class="flutuante">
     </div>
     
     <!-- Lado direito com informações -->
-<div class="right-side">
-  <h1>Como a Wherever pode te ajudar?</h1>
-  <p class="paragrafo">Prepare-se para uma jornada emocionante de descobertas com o Wherever. Seja bares aconchegantes, restaurantes requintados, baladas vibrantes ou rooftops com vistas deslumbrantes, tudo está ao seu alcance com apenas um toque. Defina seu raio de busca e deixe-nos revelar os tesouros escondidos ao seu redor. Uma vez encontrado o local perfeito, mergulhe em avaliações detalhadas, acessibilidades e características exclusivas. Sua próxima aventura está esperando por você. Explore o mundo ao seu redor agora mesmo com o Wherever!</p>
-
-  <div class="quemsomos-section">
-    <h1 class="quemsomos-title">Quem nós somos?</h1>
-    <p class="quemsomos">Prepare-se para uma jornada emocionante de descobertas com o Wherever. Seja bares aconchegantes, restaurantes requintados, baladas vibrantes ou rooftops com vistas deslumbrantes, tudo está ao seu alcance com apenas um toque. Defina seu raio de busca e deixe-nos revelar os tesouros escondidos ao seu redor. Uma vez encontrado o local perfeito, mergulhe em avaliações detalhadas, acessibilidades e características exclusivas. Sua próxima aventura está esperando por você. Explore o mundo ao seu redor agora mesmo com o Wherever!</p>
-  </div>
-  <!-- Dentro da div .right-side -->
-<div class="footer-image">
-  <img src="logosaojudas.png" alt="Logo USJT">
-</div>
-
-  <!-- Lado direito com atalhos -->
-  <div class="right-side">
-    <div class="atalhos">
-      <button onclick="location.href='#about-us-section'">Sobre Nós</button>
-      <button onclick="location.href='#what-is-wherever-section'">O que é o Wherever?</button>
-    </div>
-  </div>
-
+    <div class="right-side">
+    
+      <!-- Seção "Sobre Nós" -->
+      <div id="about-us-section">
+        <h1>Como a Wherever pode te ajudar?</h1>
+        <p class="paragrafo">
+          Com Wherever, você descobre lugares incríveis com apenas um toque. Seja bares aconchegantes, restaurantes requintados, baladas vibrantes ou rooftops com vistas deslumbrantes, tudo está ao seu alcance. Defina seu raio de busca e deixe-nos revelar os tesouros escondidos ao seu redor!</p>
+      </div>
+      
+      <!-- Seção "Quem nós somos" -->
+      <div class="quemsomos-section">
+        <div id="what-is-wherever-section">
+          <h1 class="quemsomos-title">Quem nós somos?</h1>
+        </div>
+        <p class="quemsomos">Nós somos um grupo de estudantes da Universidade São Judas Tadeu, na Mooca. Desenvolvemos este site como parte de uma atividade curricular, mas nosso objetivo é fazer algo realmente útil para o dia a dia das pessoas. Queremos facilitar a descoberta de lugares incríveis ao redor, colocando nossas habilidades em prática para tornar isso possível.</p>
+      </div>
+      
+      <!-- Imagem do rodapé -->
+      <div class="footer-image">
+        <img src="logosaojudas.png" alt="Logo USJT">
+      </div>
+      
+      <!-- Atalhos no lado direito -->
+      <div class="atalhos">
+        <button onclick="location.href='#about-us-section'">Sobre Nós</button>
+        <button onclick="location.href='#what-is-wherever-section'">O que é o Wherever?</button>
+      </div>
+      
+    </div> <!-- Fim do lado direito -->
+    
+  </div> <!-- Fim do container principal -->
+  
   <!-- Espaço para renderizar a aplicação React -->
   <div id="root"></div>
 
@@ -47,12 +60,8 @@
   <script src="App.js"></script>
 
   <!-- Importa os componentes React que você criou -->
-  <script src="AboutUs.js"></script>
-  <script src="WhatIsWherever.js"></script>
+  <script src="Aboutus.js"></script>
+  <script src="WhatIswherever.js"></script>
   <script src="Navigation.js"></script>
-
-  <!-- Adicione um ID para cada seção que será alvo dos botões de navegação -->
-  <div id="about-us-section"><AboutUs /></div>
-  <div id="what-is-wherever-section"><WhatIsWherever /></div>
 </body>
 </html>
