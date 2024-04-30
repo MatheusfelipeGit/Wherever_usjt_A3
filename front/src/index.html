@@ -3,41 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sua Página</title>
+  <title>Wherever!</title>
   <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo CSS externo -->
 </head>
 <body>
   <!-- Container principal -->
-  <div class="container">
+  <main class="container">
   
     <!-- Lado esquerdo com a logo -->
-    <div class="left-side">
+    <section class="left-side">
       <img src="Original sobre transparência.png" alt="Imagem 1">
       <img src="Globo2.png" alt="Imagem 2" class="flutuante">
-    </div>
+    </section>
     
     <!-- Lado direito com informações -->
-    <div class="right-side">
+    <section class="right-side">
     
       <!-- Seção "Sobre Nós" -->
-      <div id="about-us-section">
+      <aside id="about-us-section">
         <h1>Como a Wherever pode te ajudar?</h1>
         <p class="paragrafo">
-          Com Wherever, você descobre lugares incríveis com apenas um toque. Seja bares aconchegantes, restaurantes requintados, baladas vibrantes ou rooftops com vistas deslumbrantes, tudo está ao seu alcance. Defina seu raio de busca e deixe-nos revelar os tesouros escondidos ao seu redor!</p>
-      </div>
+          Com Wherever, você descobre lugares incríveis com apenas um toque. Seja bares aconchegantes, restaurantes requintados, baladas vibrantes ou rooftops com vistas deslumbrantes, tudo está ao seu alcance. Defina seu raio de busca e deixe-nos revelar os tesouros escondidos ao seu redor!
+        </p>
+      </aside>
       
       <!-- Seção "Quem nós somos" -->
-      <div class="quemsomos-section">
-        <div id="what-is-wherever-section">
+      <article class="quemsomos-section">
+        <p id="what-is-wherever-section">
           <h1 class="quemsomos-title">Quem nós somos?</h1>
-        </div>
-        <p class="quemsomos">Nós somos um grupo de estudantes da Universidade São Judas Tadeu, na Mooca. Desenvolvemos este site como parte de uma atividade curricular, mas nosso objetivo é fazer algo realmente útil para o dia a dia das pessoas. Queremos facilitar a descoberta de lugares incríveis ao redor, colocando nossas habilidades em prática para tornar isso possível.</p>
-      </div>
-      
-      <!-- Imagem do rodapé -->
-      <div class="footer-image">
-        <img src="logosaojudas.png" alt="Logo USJT">
-      </div>
+        </p>
+        <p class="quemsomos">Nós somos um grupo de estudantes da Universidade São Judas Tadeu, na Mooca. Desenvolvemos este site como parte de uma atividade curricular, mas nosso objetivo é  fazer algo realmente útil para o dia a dia das pessoas. Queremos facilitar a descoberta de lugares incríveis ao redor, colocando nossas habilidades em prática para tornar isso possível.
+        </p>
+      </article>
       
       <!-- Atalhos no lado direito -->
       <div class="atalhos">
@@ -45,9 +42,9 @@
         <button onclick="location.href='#what-is-wherever-section'">O que é o Wherever?</button>
       </div>
       
-    </div> <!-- Fim do lado direito -->
+    </section> <!-- Fim do lado direito -->
     
-  </div> <!-- Fim do container principal -->
+  </main> <!-- Fim do container principal -->
   
   <!-- Espaço para renderizar a aplicação React -->
   <div id="root"></div>
@@ -63,5 +60,11 @@
   <script src="Aboutus.js"></script>
   <script src="WhatIswherever.js"></script>
   <script src="Navigation.js"></script>
+
+  <footer> <!-- Imagem do rodapé -->
+    <div class="footer-image">
+      <img src="logosaojudas.png" alt="Logo USJT">
+    </div>
+  </footer>
 </body>
 </html>

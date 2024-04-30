@@ -13,7 +13,7 @@
 
 /* Estilo para o lado direito */
 .right-side {
-  flex: 0 0 100vh; /* Define o tamanho do lado direito como 100% da altura da viewport */
+  flex: 0 0 120vh; /* Define o tamanho do lado direito como 120% da altura da viewport */
   background-color: #434BE7; /* Cor de fundo azul */
   padding: 99px; /* Espaçamento interno */
 }
@@ -25,9 +25,9 @@
 .footer-image img /* Foto São Judas */{
   height: auto; /* Mantém a proporção original da imagem */
   top: 200px; /* Distância do topo */
-  left: 800px; /* Distância da esquerda */
+  left: 180vh; /* Distância da esquerda */
   width: 200px; /* Largura da imagem */
-  margin-top: 210px; /* Margem superior */
+  margin-top: 60vh; /* Margem superior */
 }
 
 img /* Foto da Wherever */  {
