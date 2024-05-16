@@ -1,12 +1,23 @@
+import express from "express";
+import mysql from 'mysql2';
+
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 // Define o endpoint GET /hello-word
-app.get('/hello-word', (req, res) => {
-  res.send('Hello, world!');
-});
+app.get("/teste", (req, res ) => {
+  const connection = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'root',
+  database: 'Wherever'
+  });
 
+  connection.query('select * from tb_usuarios', (err, result) => {
+      res.send(result);
+  })
+});
 // Inicia o servidor
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
