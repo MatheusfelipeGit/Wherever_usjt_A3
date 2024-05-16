@@ -1,8 +1,10 @@
-const express = require("express");
-const mysql = require("mysql");
-const app = express();
-app.use(express.json());
+const express = require("express"); //esse require é tipo um import
+const mysql = require("mysql2");//esse require é tipo um import
+const app = new express();//esse require é tipo um import
 
+app.use(express.json()); 
+
+//esse app é responsável por criar a conexão e retornar o que queremos 
 app.get("/usuarios", (req, res ) => {
     const connection = mysql.createConnection({
     host: 'localhost',
@@ -10,16 +12,40 @@ app.get("/usuarios", (req, res ) => {
     password: 'root',
     database: 'Wherever'
     });
+    //if caso de erro, para saber onde o erro está
+    connection.connect((err) => {
+        if (err) {
+            console.error('Erro ao conectar ao banco de dados:', err);
+            res.status(500).send('Erro interno do servidor ao conectar ao banco de dados');
+            return;
+        }
 
-    connection.query('select * from tb_usuarios', (err, results, fields) => {
-        console.log(results);
-        console.log(fields);
-        res.Send('ok');
-    })
+        //essa query faz a consulta no sql
+        connection.query('SELECT * FROM tb_usuarios', (err, results) => {
+            connection.end(); // Fecha a conexão com o banco de dados
+
+            //outro if caso tenha erro especifico
+            if (err) {
+                console.error('Erro ao executar a consulta:', err);
+                res.status(500).send('Erro interno do servidor ao executar a consulta');
+                return;
+            }
+
+            //retorna o result
+            console.log('Resultados da consulta:', results);
+            res.send(results);
+        });
+    });
+
+    // connection.query('select * from tb_usuarios', (err, result) => {
+    //     res.send(result);  
+    // })
     
 });
 
-const porta = 3000;
+//rodando na porta 3030
+const porta = 3030;
 app.listen(porta, () => console.log (`Executando na porta ${porta}`));
 
 
+// inicia o localhost http://localhost:3030/usuarios
