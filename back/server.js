@@ -3,7 +3,7 @@ import mysql from 'mysql2';
 
 const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 4000;
 
 // Define o endpoint GET /hello-word
 app.get("/teste", (req, res ) => {
@@ -24,4 +24,4 @@ app.listen(PORT, () => {
 });
 
 
-// inicia o localhost http://localhost:3000/hello-word //
+// inicia o localhost http://localhost:4000/hello-word //

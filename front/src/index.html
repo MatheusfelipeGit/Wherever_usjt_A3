@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wherever!</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js" ></script>
   <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo CSS externo -->
 </head>
 <body>
@@ -20,21 +21,20 @@
     <section class="right-side">
     
 
-      <!-- barra de pesquisa/ botao/ resposta  -->
-      <label class="respostas"> Digite a pergunta:<input type= "text" id="prompt"></label>
-      <button onclick="enviar()"> Perguntar</button>
-      <input type="text" id=" completion">
+      <label class="respostas">Digite a pergunta: <input type="text" id="prompt"></label>
+      <button onclick="enviar()">Perguntar</button>
+      <input type="text" id="completion">
+    
       <script>
-          function enviar(){
-              const pergunta= document.getElementById*("prompt").value;
-              axios.post('http://localhost:4000/pergunte-ao-chatgpt', {prompt: pergunta})
-              .then(res => {
-                  document.getElementById("completion").value = res.data.completion;
-              })
-              .catch(erro=>{
-                  console.log(erro);
-              }) 
-          }
+        async function enviar() {
+            const pergunta = document.getElementById("prompt").value;
+            try {
+                const response = await axios.post('http://localhost:4000/pergunte-ao-chatgpt', { prompt: pergunta });
+                document.getElementById("completion").value = response.data.completion;
+            } catch (error) {
+                console.error(error);
+            }
+        }
       </script>
 
       <!-- Seção "Sobre Nós" -->
