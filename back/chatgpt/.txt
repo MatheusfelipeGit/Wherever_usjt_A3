@@ -6,3 +6,9 @@ npm install cors
 npm install dotenv  (separar os arquivos) 
 npm install express (sobe o arquivo)
 npm install openai  (fala com chatgpt)
+
+
+Geolocation:
+npm install axios openai
+para rodar node geolocation.js
+instalar node.js

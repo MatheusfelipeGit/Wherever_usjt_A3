@@ -1,8 +1,0 @@
-o que precisamos instalar para funcionar:
-
-npm init -y
-npm install nodemon --save-dev
-npm install cors 
-npm install dotenv  (separar os arquivos) 
-npm install express (sobe o arquivo)
-npm install openai  (fala com chatgpt)

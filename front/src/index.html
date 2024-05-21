@@ -20,7 +20,7 @@
     <!-- Lado direito com informações -->
     <section class="right-side">
     
-
+      <!-- pergunta e resposta Chatgpt-->
       <label class="respostas">Digite a pergunta: <input type="text" id="prompt"></label>
       <button onclick="enviar()">Perguntar</button>
       <input type="text" id="completion">
@@ -36,6 +36,54 @@
             }
         }
       </script>
+      
+      <!--
+        Exemplo da geolocalização_Chatgpt
+      -->
+           <title>Geolocalização</title>
+
+
+    <h1>Minha localização atual</h1>
+    <button onclick="getLocation()">Obter Localização</button>
+    <p id="location">Localização: <span id="coords"></span></p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocalização não é suportada por este navegador.";
+            }
+        }
+
+        function showPosition(position) {
+            var coords = "Latitude: " + position.coords.latitude +
+                         "<br>Longitude: " + position.coords.longitude;
+            document.getElementById("coords").innerHTML = coords;
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerHTML = "Usuário negou a solicitação de Geolocalização."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerHTML = "As informações de localização não estão disponíveis."
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("location").innerHTML = "A solicitação para obter a localização do usuário expirou."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById("location").innerHTML = "Ocorreu um erro desconhecido."
+                    break;
+            }
+        }
+    </script>
+
+
+
+
+
 
       <!-- Seção "Sobre Nós" -->
       <aside id="about-us-section">
