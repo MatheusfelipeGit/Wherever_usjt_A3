@@ -1,5 +1,6 @@
-import '../styles.css';
+import '../styles.css'; //import do css
 
+// básicamennte só tem o lado esquerdo
  function Whatiswherever () {
     return(
         <div>

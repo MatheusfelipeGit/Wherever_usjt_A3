@@ -1,14 +1,16 @@
-import React, { useState } from "react";
-import axios from "axios";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles.css';
+import React, { useState } from "react"; //import para usar React
+import axios from "axios"; //import para usar axios 
+import 'bootstrap/dist/css/bootstrap.min.css'; //import do bootstrap
+import '../styles.css'; //import do css
 
 import Whereverimg from '../img/Whereverimg.png';
-import Globo2 from '../img/Globo2.png';
+import Globo2 from '../img/Globo2.png';// import das imagens
 
 
 
 function Aboutus() {
+
+    //código para lat e long
   const [prompt, setPrompt] = useState("");
   const [completion, setCompletion] = useState("");
   const [location, setLocation] = useState("");
@@ -50,9 +52,10 @@ function Aboutus() {
       case error.UNKNOWN_ERROR:
         setLocation("Ocorreu um erro desconhecido.");
         break;
-    }
+    } //fim do código
   };
 
+  //código html da página com bootstrap
   return (
     <div className="container my-4">
 
@@ -60,7 +63,7 @@ function Aboutus() {
 
       <section className="col-md-3 mb-4">
 
-        <img src={Whereverimg} alt="Imagem 1" className="img-fluid" />
+        <img src={Whereverimg} alt="Imagem 1" className="img-fluid" /> 
 
       </section>
 
@@ -130,4 +133,4 @@ function Aboutus() {
   );
 }
 
-export default Aboutus;
+export default Aboutus; //export para permitir que chame import no App
