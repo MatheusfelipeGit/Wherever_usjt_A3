@@ -1,0 +1,4 @@
+o que precisamos instalar para funcionar:
+
+npm i
+npm install axios

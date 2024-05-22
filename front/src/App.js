@@ -4,11 +4,13 @@ import Whatiswherever from "./Components/Whatiswherever";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
+
  function App() {
     return(
         <div>
+         <Whatiswherever/>
          <Aboutus/>
-        <Whatiswherever/> 
         <h2>teste</h2>
         </div>
     )
