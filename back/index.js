@@ -1,7 +1,7 @@
- const express = require("express"); //esse require é tipo um import
+const express = require("express"); //esse require é tipo um import
 const mysql = require("mysql2");//esse require é tipo um import
 const app = new express();//esse require é tipo um import
-
+//teste 1
 app.use(express.json()); 
 
 //esse app é responsável por criar a conexão e retornar o que queremos 

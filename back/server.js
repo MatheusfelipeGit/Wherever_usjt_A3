@@ -1,6 +1,6 @@
 import express from "express";
 import mysql from 'mysql2';
-
+//teste1
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 4000;
