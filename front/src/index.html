@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wherever!</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.8/dist/axios.min.js" ></script>
+  <link rel="stylesheet" href="styles.css"> <!-- Importa o arquivo CSS externo -->
+</head>
+<body>
+  <!-- Container principal -->
+  <main class="container">
+  
+    <!-- Lado esquerdo com a logo -->
+    <section class="left-side">
+      <img src="Original sobre transparência.png" alt="Imagem 1">
+      <img src="Globo2.png" alt="Imagem 2" class="flutuante">
+    </section>
+    
+    <!-- Lado direito com informações -->
+    <section class="right-side">
+    
+      <!-- pergunta e resposta Chatgpt-->
+      <label class="respostas">Digite a pergunta: <input type="text" id="prompt"></label>
+      <button onclick="enviar()">Perguntar</button>
+      <input type="text" id="completion">
+    
+      <script>
+        async function enviar() {
+            const pergunta = document.getElementById("prompt").value;
+            try {
+                const response = await axios.post('http://localhost:4000/pergunte-ao-chatgpt', { prompt: pergunta });
+                document.getElementById("completion").value = response.data.completion;
+            } catch (error) {
+                console.error(error);
+            }
+        }
+      </script>
+      
+      <!--
+        Exemplo da geolocalização_Chatgpt
+      -->
+           <title>Geolocalização</title>
+
+
+    <h1>Minha localização atual</h1>
+    <button onclick="getLocation()">Obter Localização</button>
+    <p id="location">Localização: <span id="coords"></span></p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                document.getElementById("location").innerHTML = "Geolocalização não é suportada por este navegador.";
+            }
+        }
+
+        function showPosition(position) {
+            var coords = "Latitude: " + position.coords.latitude +
+                         "<br>Longitude: " + position.coords.longitude;
+            document.getElementById("coords").innerHTML = coords;
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    document.getElementById("location").innerHTML = "Usuário negou a solicitação de Geolocalização."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    document.getElementById("location").innerHTML = "As informações de localização não estão disponíveis."
+                    break;
+                case error.TIMEOUT:
+                    document.getElementById("location").innerHTML = "A solicitação para obter a localização do usuário expirou."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    document.getElementById("location").innerHTML = "Ocorreu um erro desconhecido."
+                    break;
+            }
+        }
+    </script>
+
+      <!-- Seção "Sobre Nós" -->
+      <aside id="about-us-section">
+        <h1>Como a Wherever pode te ajudar?</h1>
+        <p class="paragrafo">
+          Com Wherever, você descobre lugares incríveis com apenas um toque. Seja bares aconchegantes, restaurantes requintados, baladas vibrantes ou rooftops com vistas deslumbrantes, tudo está ao seu alcance. Defina seu raio de busca e deixe-nos revelar os tesouros escondidos ao seu redor!
+        </p>
+      </aside>
+      
+      <!-- Seção "Quem nós somos" -->
+      <article class="quemsomos-section">
+        <p id="what-is-wherever-section">
+          <h1 class="quemsomos-title">Quem nós somos?</h1>
+        </p>
+        <p class="quemsomos">Nós somos um grupo de estudantes da Universidade São Judas Tadeu, na Mooca. Desenvolvemos este site como parte de uma atividade curricular, mas nosso objetivo é  fazer algo realmente útil para o dia a dia das pessoas. Queremos facilitar a descoberta de lugares incríveis ao redor, colocando nossas habilidades em prática para tornar isso possível.
+        </p>
+      </article>
+      
+      <!-- Atalhos no lado direito -->
+      <div class="atalhos">
+        <button onclick="location.href='#about-us-section'">Sobre Nós</button>
+        <button onclick="location.href='#what-is-wherever-section'">O que é o Wherever?</button>
+      </div>
+      
+    </section> <!-- Fim do lado direito -->
+    
+  </main> <!-- Fim do container principal -->
+  
+  <!-- Espaço para renderizar a aplicação React -->
+  <div id="root"></div>
+
+  <!-- Importa as bibliotecas React e ReactDOM -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+
+  <!-- Importa o arquivo JavaScript principal da sua aplicação -->
+  <script src="App.js"></script>
+
+  <!-- Importa os componentes React que você criou -->
+  <script src="Aboutus.js"></script>
+  <script src="WhatIswherever.js"></script>
+  <script src="Navigation.js"></script>
+
+  <footer> <!-- Imagem do rodapé -->
+    <div class="footer-image">
+      <img src="logosaojudas.png" alt="Logo USJT">
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,145 @@
+/* Estilo para a divisão da página */
+.container {
+  display: flex;
+  min-height: 100vh; /* Alterado para altura mínima de 100% da altura da viewport */
+}
+
+/* Estilo para o lado esquerdo */
+.left-side {
+  flex: 0 0 70vh; /* Define o tamanho do lado esquerdo como 70% da altura da viewport */
+  background-color: #ffffff; /* Cor de fundo branca */
+  padding: 16px; /* Espaçamento interno */
+}
+
+/* Estilo para o lado direito */
+.right-side {
+  flex: 0 0 120vh; /* Define o tamanho do lado direito como 120% da altura da viewport */
+  background-color: #434BE7; /* Cor de fundo azul */
+  padding: 99px; /* Espaçamento interno */
+}
+
+.img-container {
+  width: 50%; /* Largura do contêiner de imagem */
+}
+
+.footer-image img /* Foto São Judas */{
+  height: auto; /* Mantém a proporção original da imagem */
+  top: 200px; /* Distância do topo */
+  left: 180vh; /* Distância da esquerda */
+  width: 200px; /* Largura da imagem */
+  margin-top: 60vh; /* Margem superior */
+}
+
+img /* Foto da Wherever */  {
+  position: fixed; /* Posição fixa */
+  top: 10px; /* Distância do topo */
+  left: 50px; /* Distância da esquerda */
+  width: 315px; /* Largura da imagem */
+  margin-top: 50px; /* Margem superior */
+}
+
+.container img:nth-child(2) /* Foto do Globo */{
+  position: fixed; /* Posição fixa */
+  top: 50px; /* Distância do topo */
+  left: 85px; /* Distância da esquerda */
+  margin-top: 180px; /* Margem superior */
+  width: 210px; /* Largura da imagem */
+  height: auto; /* Mantém a proporção original da imagem */
+}
+
+h2 {
+  font-size: 24px; /* Tamanho da fonte */
+  color: #000000; /* Cor do texto */
+  margin-top: 35px; /* Margem superior */
+}
+
+body {
+  width: 100%; /* Largura total */
+  height: 10vh; /* Altura de 10% da viewport */
+  overflow-x: hidden; /* Esconde apenas a barra de rolagem horizontal */
+}
+
+/* Estilo para os atalhos */
+.atalhos {
+  position: absolute; /* Posição absoluta */
+  top: 40px; /* Distância do topo */
+  right: 75px; /* Distância da direita */
+}
+
+.atalhos button {
+  margin-right: 70px; /* Margem direita */
+  padding: 2px; /* Preenchimento */
+  border: none; /* Sem borda */
+  background: none; /* Fundo transparente */
+  font-size: 18px; /* Tamanho da fonte */
+  color: #191b52; /* Cor do texto */
+  cursor: pointer; /* Cursor de apontador */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte */
+}
+
+.atalhos button:hover{
+  color: white; /* Cor do texto ao passar o mouse */
+  transition: 0.3s; /* Transição suave */
+}
+
+/* Estilo para o parágrafo */
+.paragrafo {
+  font-size: 15px; /* Tamanho da fonte */
+  line-height: 1.6; /* Altura da linha */
+  max-width: 400px; /* Largura máxima */
+  margin-top: 30px; /* Margem superior */
+  color: #000000; /* Cor do texto */
+  text-align: justify; /* Aplica justificação ao texto */
+  font-family: "Times New Roman", serif; /* Define a fonte */
+}
+
+/* Estilo para o título "Como a Wherever pode te ajudar?" */
+.right-side h1 {
+  font-family: "Times New Roman"; /* Define a fonte */
+  font-size: 25px; /* Tamanho da fonte */
+  color: #191b52; /* Cor do texto */
+  margin-bottom: 25px; /* Margem inferior */
+  margin-top: 45px; /* Margem superior */
+}
+
+/* Estilo para o título "Quem nós somos?" */
+.quemsomos-title {
+  font-family: "Times New Roman", serif; /* Define a fonte */
+  font-size: 25px; /* Tamanho da fonte */
+  color: #191b52; /* Cor do texto */
+}
+
+/* Estilo para a seção "Quem nós somos" */
+.quemsomos-section {
+  padding-top: 50px; /* Espaçamento superior */
+  margin-top: 250px; /* Margem superior */
+}
+
+/* Estilo para o parágrafo "Quem nós somos, afinal?" */
+.quemsomos {
+  font-size: 15px; /* Tamanho da fonte */
+  line-height: 1.6; /* Altura da linha */
+  max-width: 400px; /* Largura máxima */
+  margin-top: 30px; /* Margem superior */
+  color: #000000; /* Cor do texto */
+  text-align: justify; /* Aplica justificação ao texto */
+  font-family: "Times New Roman", serif; /* Define a fonte */
+}
+
+html {
+  scroll-behavior: smooth; /* Comportamento de rolagem suave */
+}
+
+.flutuante {
+  animation: flutuar 3s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
