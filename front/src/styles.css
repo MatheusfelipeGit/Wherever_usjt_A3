@@ -1,22 +1,33 @@
 /* Estilo para a divisão da página */
 .container {
   display: flex;
-  min-height: 100vh; /* Alterado para altura mínima de 100% da altura da viewport */
+  min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
+}
+
+.container img:nth-child(2) /* Foto do Globo */{
+  position: fixed; /* Posição fixa */
+  top: 50px; /* Distância do topo */
+  left: 85px; /* Distância da esquerda */
+  margin-top: 180px; /* Margem superior */
+  width: 210px; /* Largura da imagem */
+  height: auto; /* Mantém a proporção original da imagem */
 }
 
 /* Estilo para o lado esquerdo */
 .left-side {
-  flex: 0 0 70vh; /* Define o tamanho do lado esquerdo como 70% da altura da viewport */
+  flex: 0 0 10%; /* Define o tamanho do lado esquerdo como 30% da largura da viewport */
   background-color: #ffffff; /* Cor de fundo branca */
   padding: 16px; /* Espaçamento interno */
 }
 
 /* Estilo para o lado direito */
 .right-side {
-  flex: 0 0 120vh; /* Define o tamanho do lado direito como 120% da altura da viewport */
+  flex: 0 0 130%; /* O lado direito deve ocupar o restante do espaço disponível */
   background-color: #434BE7; /* Cor de fundo azul */
   padding: 99px; /* Espaçamento interno */
 }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .img-container {
   width: 50%; /* Largura do contêiner de imagem */
@@ -38,14 +49,8 @@ img /* Foto da Wherever */  {
   margin-top: 50px; /* Margem superior */
 }
 
-.container img:nth-child(2) /* Foto do Globo */{
-  position: fixed; /* Posição fixa */
-  top: 50px; /* Distância do topo */
-  left: 85px; /* Distância da esquerda */
-  margin-top: 180px; /* Margem superior */
-  width: 210px; /* Largura da imagem */
-  height: auto; /* Mantém a proporção original da imagem */
-}
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
+
 
 h2 {
   font-size: 24px; /* Tamanho da fonte */
@@ -55,15 +60,80 @@ h2 {
 
 body {
   width: 100%; /* Largura total */
-  height: 10vh; /* Altura de 10% da viewport */
+  height: 100vh; /* Altura de 100% da viewport */
   overflow-x: hidden; /* Esconde apenas a barra de rolagem horizontal */
 }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
+.respostas{
+  align-items: center;
+}
+.respostas-chat{
+  width: 450px;
+  margin-left: 5px;
+  border: none;
+  font-size: 15px;
+  outline: none;  
+}
+
+.perguntas-chat{
+  width: 450px;
+  margin-right: 5px;
+  border: none;
+  font-size: 15px;
+  outline: 2%;
+  outline-color: #415bf0;
+}
+
+.botao-perguntar{
+  background-color: #ffffff; /* Cor de fundo */
+  color: rgb(0, 0, 0); /* Cor do texto */
+  padding: 5px 20px; /* Preenchimento */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Cursor de apontador */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  margin-right: 10px;
+  margin-left: 10px; /* Adiciona uma margem à direita para separar o botão do texto de localização */
+}
+
+.botao-perguntar:hover{
+  background-color: #434BE7;
+}
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+.botaolocaliza {
+  background-color: #2b85fa; /* Cor de fundo */
+  color: rgb(0, 0, 0); /* Cor do texto */
+  padding: 5px 20px; /* Preenchimento */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Sem borda */
+  cursor: pointer; /* Cursor de apontador */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+  margin-right: 10px; /* Adiciona uma margem à direita para separar o botão do texto de localização */
+}
+
+.location {
+  background-color: #2b85fa;
+  font-size: 15px; /* Tamanho da fonte */
+  line-height: 1.6; /* Altura da linha */
+  max-width: 400px; /* Largura máxima */
+  margin-top: 15px; /* Margem superior */
+  color: #000000; /* Cor do texto */
+  text-align: justify; /* Aplica justificação ao texto */
+}
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Estilo para os atalhos */
 .atalhos {
   position: absolute; /* Posição absoluta */
   top: 40px; /* Distância do topo */
-  right: 75px; /* Distância da direita */
+  right: 75px; /*Distância da direita*/
 }
 
 .atalhos button {
@@ -75,12 +145,14 @@ body {
   color: #191b52; /* Cor do texto */
   cursor: pointer; /* Cursor de apontador */
   font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte */
-}
+} 
 
 .atalhos button:hover{
   color: white; /* Cor do texto ao passar o mouse */
   transition: 0.3s; /* Transição suave */
 }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Estilo para o parágrafo */
 .paragrafo {
@@ -131,7 +203,7 @@ html {
 }
 
 .flutuante {
-  animation: flutuar 3s ease-in-out infinite alternate;
+  animation: flutuar 1s ease-in-out infinite alternate;
 }
 
 @keyframes flutuar {
@@ -142,4 +214,3 @@ html {
     transform: translateY(-10px);
   }
 }
-
