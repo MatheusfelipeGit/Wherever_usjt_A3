@@ -7,7 +7,7 @@
 .imgWherever /* Foto do Wherever dentro da div left-side */{
   position: fixed; /* Posição fixa */
   top: 0px; /* Distância do topo */
-  left: 45px; /* Distância da esquerda */
+  left: 120px; /* Distância da esquerda */
   margin-top: 130px; /* Margem superior */
   width: 350px; /* Largura da imagem */
   height: auto; /* Mantém a proporção original da imagem */
@@ -16,7 +16,7 @@
 .imgGlobo /* Foto do Globo dentro da div left-side*/{
   position: fixed; /* Posição fixa */
   top: 60px; /* Distância do topo */
-  left: 65px; /* Distância da esquerda */
+  left: 140px; /* Distância da esquerda */
   margin-top: 180px; /* Margem superior */
   width: 250px; /* Largura da imagem */
   height: auto; /* Mantém a proporção original da imagem */
@@ -31,7 +31,7 @@
 
 /* Estilo para o lado direito */
 .right-side {
-  flex: 0 0 100%; /* O lado direito deve ocupar o restante do espaço disponível */
+  flex: 0 0 110%; /* O lado direito deve ocupar o restante do espaço disponível */
   background-color: #434BE7; /* Cor de fundo azul */
   padding: 99px; /* Espaçamento interno */
 }
@@ -150,7 +150,7 @@ body {
   height: 100vh;
 } */
 
-.dicas-locais{
+#dicas-locais{
 margin-top: 290px;
 
 }
@@ -254,10 +254,10 @@ h2.sub-titulo{
 /*estilo de todos os paragrafos*/
 .right-side h1 {
   font-family: "Times New Roman"; /* Define a fonte */
-  font-size: 25px; /* Tamanho da fonte */
+  font-size: 27px; /* Tamanho da fonte */
   color: #ffffff; /* Cor do texto */
   margin-bottom: 25px; /* Margem inferior */
-  margin-top: 45px; /* Margem superior */
+  margin-top: 80px; /* Margem superior */
   
 }
 
@@ -269,7 +269,7 @@ h2.sub-titulo{
 } */
 
 /* Estilo para a seção "Quem nós somos" */
-.quemsomos-section {
+#quemsomos-section {
   padding-top: 50px; /* Espaçamento superior */
   margin-top: 50px; /* Margem superior */
 }
@@ -284,7 +284,7 @@ h2.sub-titulo{
   text-align: justify; /* Aplica justificação ao texto */
   font-family: "Times New Roman", serif; /* Define a fonte */
 }
-#about-us-section{
+.about-us-section{
   margin-top: 50px;
   margin-bottom: 250px;
 }

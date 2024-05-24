@@ -1,17 +1,13 @@
 import React from "react";
-// import Right from "./Components/Right";
-import Left from "./Components/Left";
+import Scroll from "./Components/Scroll";
+import Principal from "./Components/Principal";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-
-
 
  function App() {
     return(
         <div>
-         <Left/>
-         {/* <Right/> */}
+         <Principal/>
+         <Scroll/>
          <main/>
         </div>
     )
