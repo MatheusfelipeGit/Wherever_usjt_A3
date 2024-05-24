@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from "axios";
+import scrollToSection from "./Navigation";
+
 import 'bootstrap/dist/css/bootstrap.min.css'; //import do bootstrap
 import '../styles.css'; //import do css
 
@@ -111,11 +113,11 @@ function RightSide() {
       <button className="botao-perguntar" onClick={enviar}>Perguntar</button>
       <input className="respostas-chat" type="text" value={completion} readOnly />
 
-      <section className="dicas-locais">
+      <div className="dicas-locais">
 
         <div className="interface">
 
-          <h2 className="titulo">Dicas <span> Wherever.</span></h2>
+          <h2 className="titulo">Dicas Wherever:</h2>
 
           <h2 className="sub-titulo"> Olá somos Wherever , estamos aqui para te ajudar a ter sua melhor experiencia  e apreciar os melhores momentos. Veja algumas de nossas dicas e avaliações sobre restaurantes e locais descontraídos que você pode conhecer. </h2>
           
@@ -148,7 +150,7 @@ function RightSide() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
 
       {/* Seção "Quem nós somos" */}
       <article className="quemsomos-section">
@@ -158,9 +160,10 @@ function RightSide() {
 
       {/* Atalhos para navegação */}
       <div className="atalhos">
-        <button onClick={() => window.location.href='#about-us-section'}>Sobre Nós</button>
-        <button onClick={() => window.location.href='#what-is-wherever-section'}>O que é o Wherever?</button>
-      </div>
+  <button onClick={() => scrollToSection('about-us-section')}>Indicações</button>
+  <button onClick={() => scrollToSection('what-is-wherever-section')}>O que é o Wherever?</button>
+</div>
+
       
     </section>
     

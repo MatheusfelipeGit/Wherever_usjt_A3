@@ -150,6 +150,10 @@ body {
   height: 100vh;
 } */
 
+.dicas-locais{
+margin-top: 290px;
+
+}
 .interface{
 max-width: 1280px;
 margin: 0 auto;
@@ -224,7 +228,7 @@ h2.sub-titulo{
   border: none; /* Sem borda */
   background: none; /* Fundo transparente */
   font-size: 18px; /* Tamanho da fonte */
-  color: #191b52; /* Cor do texto */
+  color: #000000; /* Cor do texto */
   cursor: pointer; /* Cursor de apontador */
   font-family: Georgia, 'Times New Roman', Times, serif; /* Fonte */
 } 
@@ -238,46 +242,51 @@ h2.sub-titulo{
 
 /* Estilo para o parágrafo */
 .paragrafo {
-  font-size: 15px; /* Tamanho da fonte */
-  line-height: 1.6; /* Altura da linha */
-  max-width: 400px; /* Largura máxima */
+  font-size: 20px; /* Tamanho da fonte */
+  line-height: 1.3; /* Altura da linha */
+  max-width: 900px; /* Largura máxima */
   margin-top: 30px; /* Margem superior */
-  color: #000000; /* Cor do texto */
+  color: #ffffff; /* Cor do texto */
   text-align: justify; /* Aplica justificação ao texto */
   font-family: "Times New Roman", serif; /* Define a fonte */
 }
 
-/* Estilo para o título "Como a Wherever pode te ajudar?" */
+/*estilo de todos os paragrafos*/
 .right-side h1 {
   font-family: "Times New Roman"; /* Define a fonte */
   font-size: 25px; /* Tamanho da fonte */
-  color: #191b52; /* Cor do texto */
+  color: #ffffff; /* Cor do texto */
   margin-bottom: 25px; /* Margem inferior */
   margin-top: 45px; /* Margem superior */
+  
 }
 
-/* Estilo para o título "Quem nós somos?" */
+/* Estilo para o título "Quem nós somos?"
 .quemsomos-title {
-  font-family: "Times New Roman", serif; /* Define a fonte */
-  font-size: 25px; /* Tamanho da fonte */
-  color: #191b52; /* Cor do texto */
-}
+  font-family: "Times New Roman", serif; /* Define a fonte 
+  font-size: 25px; /* Tamanho da fonte 
+  color: #ff0000; /* Cor do texto 
+} */
 
 /* Estilo para a seção "Quem nós somos" */
 .quemsomos-section {
   padding-top: 50px; /* Espaçamento superior */
-  margin-top: 250px; /* Margem superior */
+  margin-top: 50px; /* Margem superior */
 }
 
 /* Estilo para o parágrafo "Quem nós somos, afinal?" */
 .quemsomos {
-  font-size: 15px; /* Tamanho da fonte */
-  line-height: 1.6; /* Altura da linha */
-  max-width: 400px; /* Largura máxima */
+  font-size: 20px; /* Tamanho da fonte */
+  line-height: 1.3; /* Altura da linha */
+  max-width: 900px; /* Largura máxima */
   margin-top: 30px; /* Margem superior */
-  color: #000000; /* Cor do texto */
+  color: #ffffff; /* Cor do texto */
   text-align: justify; /* Aplica justificação ao texto */
   font-family: "Times New Roman", serif; /* Define a fonte */
+}
+#about-us-section{
+  margin-top: 50px;
+  margin-bottom: 250px;
 }
 
 html {
