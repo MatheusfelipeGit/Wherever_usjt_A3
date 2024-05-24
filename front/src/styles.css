@@ -4,25 +4,34 @@
   min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
 }
 
-.container img:nth-child(2) /* Foto do Globo */{
+.imgWherever /* Foto do Wherever dentro da div left-side */{
   position: fixed; /* Posição fixa */
-  top: 50px; /* Distância do topo */
-  left: 85px; /* Distância da esquerda */
+  top: 0px; /* Distância do topo */
+  left: 45px; /* Distância da esquerda */
+  margin-top: 130px; /* Margem superior */
+  width: 350px; /* Largura da imagem */
+  height: auto; /* Mantém a proporção original da imagem */
+}
+
+.imgGlobo /* Foto do Globo dentro da div left-side*/{
+  position: fixed; /* Posição fixa */
+  top: 60px; /* Distância do topo */
+  left: 65px; /* Distância da esquerda */
   margin-top: 180px; /* Margem superior */
-  width: 210px; /* Largura da imagem */
+  width: 250px; /* Largura da imagem */
   height: auto; /* Mantém a proporção original da imagem */
 }
 
 /* Estilo para o lado esquerdo */
 .left-side {
-  flex: 0 0 10%; /* Define o tamanho do lado esquerdo como 30% da largura da viewport */
+  flex: 0 0 20%; /* Define o tamanho do lado esquerdo como 30% da largura da viewport */
   background-color: #ffffff; /* Cor de fundo branca */
-  padding: 16px; /* Espaçamento interno */
+  padding-left: 5px; /* Espaçamento interno */
 }
 
 /* Estilo para o lado direito */
 .right-side {
-  flex: 0 0 130%; /* O lado direito deve ocupar o restante do espaço disponível */
+  flex: 0 0 100%; /* O lado direito deve ocupar o restante do espaço disponível */
   background-color: #434BE7; /* Cor de fundo azul */
   padding: 99px; /* Espaçamento interno */
 }
@@ -30,7 +39,7 @@
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .img-container {
-  width: 50%; /* Largura do contêiner de imagem */
+  width: 100%; /* Largura do contêiner de imagem */
 }
 
 .footer-image img /* Foto São Judas */{
@@ -41,7 +50,7 @@
   margin-top: 60vh; /* Margem superior */
 }
 
-img /* Foto da Wherever */  {
+ .img {
   position: fixed; /* Posição fixa */
   top: 10px; /* Distância do topo */
   left: 50px; /* Distância da esquerda */
@@ -126,6 +135,79 @@ body {
   color: #000000; /* Cor do texto */
   text-align: justify; /* Aplica justificação ao texto */
 }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ESTILO GERAL - sugestão  */
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box ;
+} */
+
+/* body{
+  background-color: rgb(60, 31, 226);
+  height: 100vh;
+} */
+
+.interface{
+max-width: 1280px;
+margin: 0 auto;
+}
+
+.flex{
+  display: flex;
+}
+
+h2.titulo{
+  color:#fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+h2.titulo span{
+color: #7385ec;
+margin: 10px ;
+}
+
+h2.sub-titulo{
+  color: #fff;
+  font-size: 20px;
+}
+
+/*ESTILO DA CLASSE DICAS LOCAIS - sugestão*/
+
+.section.dicas-locais{
+  padding: 40px 4%;
+  }
+  
+  .flex{
+  gap:60px ;
+  }
+  
+  .especialidades-box{
+   color:#fff;
+   padding: 40px;
+   border-radius: 20px;
+   margin-top: 45px;
+   transition:.2s;
+  }
+  
+  .especialidades-box:hover{
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #ffffff78;
+  }
+  
+  .especialidades-box i{
+  font-size: 70px;
+  color:#08062e;
+  }
+  
+  .especialidades-box h3{
+    font: size 28px; ;
+    margin: 15px 0;
+  }
+
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
