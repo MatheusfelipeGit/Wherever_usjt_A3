@@ -1,0 +1,22 @@
+// Importe a biblioteca winston
+const winston = require('winston');
+
+// Crie um logger
+const logger = winston.createLogger({
+  level: 'info', // Defina o nível de log como 'info'
+  format: winston.format.json(), // Formato de saída JSON
+  transports: [
+    new winston.transports.Console(), // Exiba logs no console
+    new winston.transports.File({ filename: 'wherever.log' }) // Salve logs em um arquivo
+  ]
+});
+
+// Exemplo de uso
+logger.log('info', 'Isso é um log de informação.');
+logger.log('error', 'Isso é um log de erro.');
+
+// Ou você pode usar os níveis de log diretamente
+logger.info('Isso é um log de informação.');
+logger.error('Isso é um log de erro.');
+
+

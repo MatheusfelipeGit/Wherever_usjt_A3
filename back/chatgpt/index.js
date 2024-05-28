@@ -10,13 +10,13 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-app.post('/pergunte-ao-chatgpt', async(req, res) => {
+app.post('/chatgpt', async(req, res) => {
     const { prompt } = req.body;
     const role = "user";
     const model = 'gpt-3.5-turbo';
     const max_tokens = 50;
     const completion= await openai.chat.completions.create({
-        messages: [{ role: role, contant: prompt }],
+        messages: [{ role: role, content: prompt }],
         model: model,
         max_tokens: max_tokens
     });
