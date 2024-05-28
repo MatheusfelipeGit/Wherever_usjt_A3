@@ -1,0 +1,7 @@
+o que precisamos instalar para funcionar:
+
+npm i
+npm install nodemon --save-dev
+npm install express mysql (instala a versão mais recente)
+
+

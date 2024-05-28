@@ -24,3 +24,5 @@ app.post('/chatgpt', async(req, res) => {
 });
 
 app.listen(4000, () => console.log("ChatGPT_Backend em execução na porta 4000"));
+
+// inicia o localhost http://localhost:4000/chatgpt

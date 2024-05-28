@@ -46,7 +46,7 @@ app.put("/mensagens", (req, res ) => {
     
 });
 
-//rodando na porta 3030
+//rodando na porta 3033
 const porta = 3033;
 app.listen(porta, () => console.log (`Executando na porta ${porta}`));
 
