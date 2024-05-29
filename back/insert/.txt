@@ -1,7 +1,9 @@
+!rodar o back (chat e o insert) e o front com npm start para tudo rodar!
+
 o que precisamos instalar para funcionar:
 
 npm i
 npm install nodemon --save-dev
-npm install express mysql (instala a versão mais recente)
+npm install mysql express (instala a versão mais recente)
 
 

@@ -1,3 +1,5 @@
+!rodar o back (chat e o insert) e o front com npm start para tudo rodar!
+
 o que precisamos instalar para funcionar:
 
 npm init -y
@@ -6,9 +8,3 @@ npm install cors
 npm install dotenv  (separar os arquivos) 
 npm install express (sobe o arquivo)
 npm install openai  (fala com chatgpt)
-
-
-Geolocation:
-npm install axios openai
-para rodar node geolocation.js
-instalar node.js

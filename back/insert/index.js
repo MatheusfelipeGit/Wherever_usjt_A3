@@ -1,11 +1,17 @@
 const express = require("express"); //esse require é tipo um import
 const mysql = require("mysql2");//esse require é tipo um import
 const app = new express();//esse require é tipo um import
+const cors = require("cors");
 
 app.use(express.json()); 
 
+app.use(cors());
+
 //esse app é responsável por fazer o put no banco de dados e faz a conexão também 
 app.put("/mensagens", (req, res ) => {
+
+    const {question, answer } = req.body;
+
     const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -23,7 +29,7 @@ app.put("/mensagens", (req, res ) => {
         }
 
         //essa query faz o insert no sql
-        connection.query('insert into mensagens_chatgpt (mensagens, respostas) values ("1?", "2"); ',
+        connection.query('insert into mensagens_chatgpt (mensagens, respostas) values (?, ?); ',[question, answer],
          (err, results) => {
             connection.end(); // Fecha a conexão com o banco de dados
 
@@ -40,9 +46,6 @@ app.put("/mensagens", (req, res ) => {
         });
     });
 
-    // connection.query('select * from tb_usuarios', (err, result) => {
-    //     res.send(result);  
-    // })
     
 });
 
