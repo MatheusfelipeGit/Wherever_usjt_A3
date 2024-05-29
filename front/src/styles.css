@@ -4,13 +4,14 @@
 /* Estilo para a divisão da página */
 .container {
   display: flex;
+  width: 100%;
   min-height: 100vh; /* Altura mínima de 100% da altura da viewport */
 }
 
 .imgWherever /* Foto do Wherever dentro da div left-side */{
   position: fixed; /* Posição fixa */
   top: 0px; /* Distância do topo */
-  left: 120px; /* Distância da esquerda */
+  left: 50px; /* Distância da esquerda */
   margin-top: 110px; /* Margem superior */
   width: 350px; /* Largura da imagem */
   height: auto; /* Mantém a proporção original da imagem */
@@ -19,23 +20,24 @@
 .imgGlobo /* Foto do Globo dentro da div left-side*/{
   position: fixed; /* Posição fixa */
   top: 60px; /* Distância do topo */
-  left: 140px; /* Distância da esquerda */
-  margin-top: 340px; /* Margem superior */
+  left: 90px; /* Distância da esquerda */
+  margin-top: 180px; /* Margem superior */
   width: 250px; /* Largura da imagem */
   height: auto; /* Mantém a proporção original da imagem */
 }
 
 /* Estilo para o lado esquerdo */
 .left-side {
-  flex: 0 0 40vh; /* Define o tamanho do lado esquerdo como 40% da altura da viewport */
+  flex: 0 0 15vh; /* Define o tamanho do lado esquerdo como 40% da altura da viewport */
   padding-left: 5px; /* Espaçamento interno */
-  animation: ondulacao-esquerda 5s infinite alternate; /* Aplica a animação de ondulação à esquerda */
+  background-color: white;
+  /* animation: ondulacao-esquerda 5s infinite alternate; Aplica a animação de ondulação à esquerda */
   
   }
   
-  @keyframes ondulacao-esquerda {
+   @keyframes ondulacao-esquerda {
     0% {
-      background-color: #177da5; /* Cor inicial */
+      background-color: lightgrey; /* Cor inicial */
     }
     100% {
       background-color: #191b52; /* Cor final */
@@ -44,10 +46,10 @@
 
 /* Estilo para o lado direito */
 .right-side {
-  flex: 1; /* Ocupa todo o espaço restante */
+  flex: 0 0 100vh; /* Ocupa todo o espaço restante */
   background-color: #434BE7; /* Cor de fundo */
-  padding: 99px; /* Espaçamento interno */
-
+  /* padding: 99px; Espaçamento interno */
+  
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
@@ -84,8 +86,11 @@ body {
   align-items: center;
   margin-left: 5px;
 }
-.respostas-chat{
+.respostas-chat {
+  white-space: pre-wrap; /* Permite quebra de linha */
   width: 450px;
+  height: 150px;
+  margin-top: 20px;
   margin-left: 5px;
   border: none;
   font-size: 15px;
@@ -93,9 +98,11 @@ body {
   border-radius: 10px;  
 }
 
+
 .perguntas-chat{
   
   width: 450px;
+  height: 50px;
   margin-right: 5px;
   border: none;
   border-radius: 10px;
@@ -250,6 +257,7 @@ text-align:left;
 .atalhos {
   position: absolute; /* Posição absoluta */
   top: 25px; /* Distância do topo */
+  margin-left: 600px;
   /* right: -30px; /Distância da direita/ */
 }
 

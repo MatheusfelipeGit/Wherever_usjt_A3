@@ -2,3 +2,5 @@ o que precisamos instalar para funcionar:
 
 npm i
 npm install axios
+
+!rodar o back (chat e o insert) e o front com npm start para tudo rodar!

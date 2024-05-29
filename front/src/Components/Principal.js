@@ -12,6 +12,7 @@ import Barzinho from '../img/Barzinho.jpeg';// import das imagens
 import Restauranterizz from '../img/Restauranterizz.jpeg';// import das imagens
 
 
+
 function Main() {
   return (
     <main className="container">
@@ -42,15 +43,38 @@ function RightSide() {
   // Definição dos estados
   const [prompt, setPrompt] = useState(''); // Pergunta
   const [completion, setCompletion] = useState(''); // Resposta
-  //const [location, setLocation] = useState(''); // Localização
 
-  // Função para enviar a pergunta e obter a resposta
+  const [message, setMessage] = useState('');
+  const [response, setResponse] = useState('');
+
+   // Função para enviar a mensagem para o servidor que recebe os dados
+   const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await axios.post('http://localhost:3033/mensagens', { message });
+      setResponse(res.data.message);
+    } catch (error) {
+      console.error('There was an error sending the data!', error);
+    }
+  };
+
+  // Função para enviar a pergunta e obter a resposta do GPT
   const enviar = async () => {
     try {
-      const response = await axios.post('http://localhost:4000/pergunte-ao-chatgpt', { prompt });
+      const response = await axios.post('http://localhost:4000/chatgpt', { prompt });
+      console.log(response.data); // Verificar o formato da resposta no console
       setCompletion(response.data.completion);
+  
+      // Verifica se a variável 'prompt' está definida
+      if (prompt) {
+        try {
+          await axios.put('http://localhost:3033/mensagens', { question: prompt, answer: response.data.completion });
+        } catch (error) {
+          console.error(error); // Certifique-se de que os erros estão sendo tratados corretamente
+        }
+      }
     } catch (error) {
-      console.error(error);
+      console.error(error); // Certifique-se de que os erros estão sendo tratados corretamente
     }
   };
 
@@ -87,7 +111,7 @@ function RightSide() {
         <h1>Digite a pergunta</h1> <input className="perguntas-chat"type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
       </label>
       <button className="botao-perguntar" onClick={enviar}>Perguntar</button>
-      <input className="respostas-chat" type="text" value={completion} readOnly />
+      <textarea className="respostas-chat" type="text" value={completion} readOnly />
       
       <div id="dicas-locais">
     <div className="interface">
