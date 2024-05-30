@@ -8,18 +8,24 @@ import Whereverimg from '../img/Whereverimg.png';
 import Globo2 from '../img/Globo2.png';// import das imagens
 
 import Boliche from '../img/Boliche.jpeg';
-import Barzinho from '../img/Barzinho.jpeg';// import das imagens
-import Restauranterizz from '../img/Restauranterizz.jpeg';// import das imagens
+import Barzinho from '../img/Barzinho.png';// import das imagens
+import Restauranterizz from '../img/Restauranterizz.png';// import das imagens
 
 
 
 function Main() {
   return (
-    <main className="container">
+    <main className="container-fluid">
       {/* Renderiza o lado esquerdo da página */}
-      <LeftSide />
-      {/* Renderiza o lado direito da página */}
-      {<RightSide />}
+      <div className="row">
+        <div className="col-md-3">
+          <LeftSide />
+        </div>
+        {/* Renderiza o lado direito da página */}
+        <div className="col-md-9">
+          <RightSide />
+        </div>
+      </div>
     </main>
   );
 }
@@ -27,15 +33,15 @@ function Main() {
 function LeftSide() {
   return (
     <div className="left-side">
-    <section className="imgWherever">
-      {/* Imagem da Wherever */}
-      <img src={Whereverimg} alt="Imagem 1" className="img-fluid flutuante mt-6" />
-      <section className="imgGlobo">
-      {/* Imagem do Globo */}
-      <img src={Globo2} alt="Imagem 2" className="img-fluid flutuante mt-6" />
+      <section className="imgWherever">
+        {/*Imagem da Wherever */}
+        <img src={Whereverimg} alt="Imagem 1" className="img-fluid flutuante mt-md-3" />
+        <section className="imgGlobo">
+          {/* Imagem do Globo */}
+          <img src={Globo2} alt="Imagem 2" className="img-fluid flutuante mt-md-3" />
+        </section>
       </section>
-      </section>
-      </div>
+    </div>
   );
 }
 
@@ -107,8 +113,9 @@ function RightSide() {
     </section>  
 
       {/* Input e botão para enviar a pergunta */}
+      <h1 className="digite-a-pergunta">Digite a pergunta</h1>
       <label className="respostas">
-        <h1>Digite a pergunta</h1> <input className="perguntas-chat"type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
+         <input className="perguntas-chat"type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
       </label>
       <button className="botao-perguntar" onClick={enviar}>Perguntar</button>
       <textarea className="respostas-chat" type="text" value={completion} readOnly />
@@ -117,7 +124,7 @@ function RightSide() {
     <div className="interface">
       <h2 className="titulo">Dicas da 
       Wherever</h2>
-      <h2 className="sub-titulo"> Separamos a dedo alguns dos locais mais diferentes e  interessantes pra você poder consultar em nosso site e conhecer mais sobre! Seja restaurantes ou bares famosos, lugares diferentes ou mais comuns, sinta-se livre para visitar e conhecer suas histórias. </h2>
+      <h2 className="sub-titulo"> Separamos a dedo alguns dos locais mais diferentes e  interessantes pra você poder consultar em nosso site e conhecer mais sobre! Seja restaurantes, bares famosos, lugares diferentes ou mais comuns, sinta-se livre para visitar e conhecer suas histórias. </h2>
       
       <div className="flex">
 
@@ -125,9 +132,7 @@ function RightSide() {
         <img class="imagens-box" src={Restauranterizz} alt="Imagem 5" className="img-fluid" />
           <h3> Rodizio de Risoto SP </h3>
           <p>Estamos falando do Rizz Restaurante, são 24 sabores de risotos, inclusive com 10 opções vegetarianas e cada mesa pode escolher 6 opções para comer à vontade! <br/>
-            A partir de R$79,90 com entradinha de aranchini incluso. Horário de funcionamento é de terça a sexta das 18H30 as 23h30.<br/>
-            ⭐ Avaliações da Web 5/5 <br/>
-            📍 Alameda Iraé, 398 - Moema.</p>
+            A partir de R$79,90 com entradinha de aranchini incluso. Horário de funcionamento é de terça a sexta das 18H30 as 23h30. <p><br/>⭐ Avaliações da Web 5/5<br/> 📍 Alameda Iraé, 398 - Moema.</p></p>
         </div>
 
         <div className="especialidades-box">
@@ -135,14 +140,14 @@ function RightSide() {
           <h3> O bar mais descolado de São Paulo </h3>
           <p> O Venancio Restauante Bar, aqui você vai encontrar coquetéis autorais e gastronomia contemporânea. Alguns dos pratos e drinks. <br/>
             Bruschetta de Jamon R$ 49,90 e Brie empanado R$ 93,90 bebidas Gin Royale R$ 44,89 e Cha Mitter R$39,98. Horários de funcionamento é das 12h as 01h pode variar conforme o dia.</p> 
-          <p>⭐ Avaliações da Web 4,3 <br/> 📍 Rua Serra de Japi, 789 - Tatuapé.</p>
+          <p>⭐ Avaliações da Web 4,3  <br/> 📍 Rua Serra de Japi, 789 - Tatuapé.</p>
         </div>
 
         <div className="especialidades-box">
         <img class="imagens-box" src={Boliche} alt="Imagem 3" className="img-fluid" />
           <h3> Esse é o Villa Bowling</h3>
           <p>O lugar é ideal para você ir com a galera e curtir um happy hour , inspirado nos boliches de Las Vegas, com ambiente amplo e pistas profissionais o lugar é simplesmente sensacional.</p>
-          <p> Por lá você encontra comida boa com o restaurante Johnny Rockets, que tem os maiores clássico burgers com sabor dos anos 80. Horário de funcionamento é de Domingo á Quinta das 11h ás 00h Sexta e Sábado e das 11h ás 01h<br/> ⭐ Avaliações da Web 4,2 <br/> 📍3 unidades em SP. Shopping Vila Olímpia, Shopping West Plaza e Shopping Center Norte.</p>
+          <p> Por lá você encontra comida boa com o restaurante Johnny Rockets, que tem os maiores clássico burgers com sabor dos anos 80. Horário de funcionamento é de Domingo á Quinta das 11h ás 00h Sexta e Sábado e das 11h ás 01h. </p> <p><br/> ⭐ Avaliações da Web 4,2 <br/> 📍3 unidades em SP. Shopping Vila Olímpia, Shopping West Plaza e Shopping Center Norte.</p>
         </div>
 
       </div>

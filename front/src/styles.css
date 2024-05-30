@@ -11,20 +11,22 @@
 .imgWherever /* Foto do Wherever dentro da div left-side */{
   position: fixed; /* Posição fixa */
   top: 0px; /* Distância do topo */
-  left: 50px; /* Distância da esquerda */
-  margin-top: 110px; /* Margem superior */
+  left: 4%; /* Distância da esquerda */
+  margin-top: 10%; /* Margem superior */
   width: 350px; /* Largura da imagem */
   height: auto; /* Mantém a proporção original da imagem */
 }
 
 .imgGlobo /* Foto do Globo dentro da div left-side*/{
   position: fixed; /* Posição fixa */
-  top: 60px; /* Distância do topo */
-  left: 90px; /* Distância da esquerda */
-  margin-top: 180px; /* Margem superior */
+  top: 50px; /* Distância do topo */
+  left: 5%; /* Distância da esquerda */
+  margin-top: 17%; /* Margem superior */
   width: 250px; /* Largura da imagem */
   height: auto; /* Mantém a proporção original da imagem */
 }
+
+
 
 /* Estilo para o lado esquerdo */
 .left-side {
@@ -82,27 +84,41 @@ body {
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
+.digite-a-pergunta{
+  color: #177da5;
+  text-shadow:
+    1.5px 1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    -1.5px -1.5px 0 #000,
+    1.5px -1.5px 0 #000;
+  font-size: 30px;
+  text-align: center;
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .respostas{
   align-items: center;
   margin-left: 5px;
 }
-.respostas-chat {
-  white-space: pre-wrap; /* Permite quebra de linha */
-  width: 450px;
-  height: 150px;
-  margin-top: 20px;
+.respostas-chat{
+  
+  width: 95%;
   margin-left: 5px;
   border: none;
   font-size: 15px;
   outline: none;
-  border-radius: 10px;  
+  border-radius: 10px;
+  min-height: 100px;
+  margin-top: 15px;
 }
 
-
 .perguntas-chat{
-  
-  width: 450px;
-  height: 50px;
+  padding-left: 10px;
+  min-height: 50px;
+  margin-top: 50px;
+  width: 1000px;
   margin-right: 5px;
   border: none;
   border-radius: 10px;
@@ -116,16 +132,16 @@ body {
   color: rgb(0, 0, 0); /* Cor do texto */
   padding: 5px 20px; /* Preenchimento */
   font-size: 16px; /* Tamanho da fonte */
-  border: none; /* Sem borda */
+  border: none; /* Sem borda*/
   cursor: pointer; /* Cursor de apontador */
-  border-radius: 5px; /* Bordas arredondadas */
+  border-radius: 5px; /*Bordas arredondadas */
   transition: background-color 0.4s; /* Transição suave para a cor de fundo */
   margin-right: 10px;
   margin-left: 10px; /* Adiciona uma margem à direita para separar o botão do texto de localização */
 }
 
 .botao-perguntar:hover{
-  background-color: #00ddff;;
+  background-color: #177da5;;
 }
 
 
@@ -167,37 +183,50 @@ body {
   height: 100vh;
 } */
 
-#dicas-locais{
-margin-top: 250px;
-
-
+#dicas-locais {
+  margin-top: 250px;
 }
-.interface{
-max-width: 1280px;
-margin: 0 auto;
+
+.interface {
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
 .flex {
-  display: contents; /* Ativar o flexbox layout */
+  display: flex; /* Usar flexbox layout */
   gap: 20px; /* Define o espaço entre as caixas */
   margin-top: 150px; /* Margem superior */
 }
 
 .especialidades-box {
   background-color: #00062b; /* Cor de fundo para visualizar as caixas */
-  padding: 0; /* Espaçamento interno das caixas */
-  border: 1px solid #00ddff;; /* Borda para visualizar as caixas */
+  padding: 0; /* Remove o espaçamento interno das caixas */
+  border: 1px solid #177da5; /* Borda para visualizar as caixas */
   flex: 1; /* Permite que as caixas cresçam igualmente */
-    /* gap: 60px; Define o espaço entre as caixas */
+  border-radius: 20px; /* Bordas arredondadas */
+  overflow: hidden; /* Esconde o conteúdo que ultrapassar as bordas */
+  transition: .3s;
+  margin-top: 45px;
 }
 
-h2.titulo{
-  color:#00ddff;
+.especialidades-box:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 10px #ffffff78;
+}
+
+.especialidades-box img {
+  width: 100%; /* Ocupa 100% da largura da caixa */
+  height: auto; /* Ajusta a altura automaticamente */
+  display: block;
+}
+
+h2.titulo {
+  color: #177da5;
   text-shadow:
-  1.5px 1.5px 0 #000,
-  -1.5px 1.5px 0 #000,
-  -1.5px -1.5px 0 #000,
-  1.5px -1.5px 0 #000;
+    1.5px 1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    -1.5px -1.5px 0 #000,
+    1.5px -1.5px 0 #000;
   font-size: 30px;
   text-align: center;
   font-family: "Krona One", sans-serif;
@@ -205,63 +234,68 @@ h2.titulo{
   font-style: normal;
 }
 
-h2.titulo span{
-color: #7385ec;
-margin: 10px ;
+h2.titulo span {
+  color: #7385ec;
+  margin: 10px;
 }
 
-h2.sub-titulo{
+h2.sub-titulo {
   color: #fff;
-  font-size: 20px;
+  font-size: 25px;
   font-family: "Montserrat", sans-serif;
-text-align:left;
+  font-style: italic;
+  text-align: center;
 }
 
-/* /ESTILO DA CLASSE DICAS LOCAIS sugestão// */
-
-.section.dicas-locais{
+.section.dicas-locais {
   padding: 40px 4%;
-  }
-  
-  .flex{
-  gap:60px ;
-  }
-  
-  .especialidades-box{
-   color:#fff;
-   padding: 40px;
-   border-radius: 20px;
-   margin-top: 45px;
-   transition:.2s;
-  }
-  
-  .especialidades-box:hover{
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #ffffff78;
-  }
-  
-  .especialidades-box i{
+}
+
+.flex {
+  gap: 60px;
+}
+
+.especialidades-box i {
   font-size: 70px;
-  color:#08062e;
-  }
-  
-  .especialidades-box h3{
-    font: size 28px; ;
-    margin: 15px 0;
-  }
+  color: #08062e;
+}
 
+.especialidades-box h3 {
+  text-align: center;
+  font-size: 28px;
+  margin: 15px 0;
+  color: #fff;
+  padding: 15px;
+}
 
+.especialidades-box p {
+  margin-left: 1px;
+  margin-right: 13px;
+  text-align: left;
+  padding: 15px;
+  color: #fff;
+}
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 /* Estilo para os atalhos */
-.atalhos {
+.atalho1 {
   position: absolute; /* Posição absoluta */
   top: 25px; /* Distância do topo */
-  margin-left: 600px;
+  margin-left: 45%;
+
   /* right: -30px; /Distância da direita/ */
 }
 
-.atalhos button {
+.atalho2 {
+  position: absolute; /* Posição absoluta */
+  top: 25px; /* Distância do topo */
+  margin-left: 65%;
+
+  /* right: -30px; /Distância da direita/ */
+}
+
+.atalho1 button {
+  align-items: center;
   margin-right:270px; /* Margem direita */
   padding: 2px; /* Preenchimento */
   border: none; /* Sem borda */
@@ -271,7 +305,27 @@ text-align:left;
   font-family: "Krona One", sans-serif;
   font-weight: 200;
   font-style: italic;/* Fonte */
-  color: #00ddff; /* Cor do texto ao passar o mouse */
+  color: #177da5;
+  text-shadow:
+    1.5px 1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    -1.5px -1.5px 0 #000,
+    1.5px -1.5px 0 #000;
+  transition: 0.4s; /* Transição suave */
+} 
+
+.atalho2 button {
+  align-items: center;
+  margin-right:270px; /* Margem direita */
+  padding: 2px; /* Preenchimento */
+  border: none; /* Sem borda */
+  background: none; /* Fundo transparente */
+  font-size: 25px; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de apontador */
+  font-family: "Krona One", sans-serif;
+  font-weight: 200;
+  font-style: italic;/* Fonte */
+  color: #177da5;
   text-shadow:
     1.5px 1.5px 0 #000,
     -1.5px 1.5px 0 #000,
@@ -332,12 +386,12 @@ text-align:left;
   font-weight: 400;
   font-style: normal;
   font-size: 40px; /* Tamanho da fonte */
-  color: #00ddff; /* Cor do número */
+  color: #177da5;
   text-shadow:
-  1.5px 1.5px 0 #000,
-  -1.5px 1.5px 0 #000,
-  -1.5px -1.5px 0 #000,
-  1.5px -1.5px 0 #000;
+    1.5px 1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    -1.5px -1.5px 0 #000,
+    1.5px -1.5px 0 #000;
   margin-right: 10px; /* Espaçamento à direita do número */
 }
 
@@ -354,7 +408,7 @@ text-align:left;
 
 /* Estilo para o parágrafo */
 .paragrafo {
-  font-size: 20px; /* Tamanho da fonte */
+  font-size: 25px; /* Tamanho da fonte */
   line-height: 1.3; /* Altura da linha */
   max-width: 900px; /* Largura máxima */
   margin-top: 30px; /* Margem superior */
@@ -369,19 +423,17 @@ text-align:left;
 /* /estilo de todos os titulos/ */
 
 .right-side h1 {
+  color: #177da5;
+  text-shadow:
+    1.5px 1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    -1.5px -1.5px 0 #000,
+    1.5px -1.5px 0 #000;
+  font-size: 30px;
+  text-align: center;
   font-family: "Krona One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 35px; /* Tamanho da fonte */
-  color: #00ddff; /* Cor do texto */
-  margin-bottom: 25px; /* Margem inferior */
-  margin-top: 20px; /* Margem superior */
-  text-align: center;  
-  text-shadow:
-  1.5px 1.5px 0 #000,
-  -1.5px 1.5px 0 #000,
-  -1.5px -1.5px 0 #000,
-  1.5px -1.5px 0 #000;
 }
 
 /* Estilo para o título "Quem nós somos?"
@@ -399,17 +451,19 @@ text-align:left;
 
 /* Estilo para o parágrafo "Quem nós somos, afinal?" */
 .quemsomos {
-  font-size: 20px; /* Tamanho da fonte */
+  font-size: 25px; /* Tamanho da fonte */
   line-height: 1.3; /* Altura da linha */
-  max-width: 900px; /* Largura máxima */
+  max-width: 1500px; /* Largura máxima */
   margin-top: 30px; /* Margem superior */
+  margin-right: 10px;
   color: #ffffff; /* Cor do texto */
   text-align: justify; /* Aplica justificação ao texto */
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: italic;
-  font-size: 18px;
+  font-size: 25px;
+  
 }
 .about-us-section{
   margin-top: 50px;
@@ -426,6 +480,21 @@ html {
 
 .imagens-box{
   margin: 0;
+}
+
+@media screen and (max-width: 1020px) {
+  .imgWherever {
+    display: none; 
+  }
+  .imgGlobo {
+    display: none;
+  }
+  .atalho2{
+    display: none;
+  }
+  .atalho1{
+    display: none;
+  }
 }
 
 @keyframes flutuar {

@@ -13,10 +13,14 @@ import React from "react";
 
  function MyComponent() {
   return (
- <div className="atalhos">
+ <section>
+ <div className="atalho1 col-md-6">
  <button onClick={() => scrollToSection('dicas-locais')}>Indicações</button>
- <button onClick={() => scrollToSection('quemsomos-section')}>O que é o Wherever?</button>
 </div>
+<div className="atalho2 col-md-6">
+<button onClick={() => scrollToSection('quemsomos-section')}>O que é a Wherever?</button>
+</div>
+</section>
   )};
 
 export default MyComponent;
