@@ -15,7 +15,7 @@ app.put("/mensagens", (req, res ) => {
     const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
-    password: 'root',
+    password: 'root01',
     database: 'WhereverOfc'
     });
     //if caso de erro, para saber onde o erro está
