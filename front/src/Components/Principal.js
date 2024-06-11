@@ -137,12 +137,14 @@ function RightSide() {
           <option value="São Paulo">São Paulo</option>
           <option value="Rio de Janeiro">Rio de Janeiro</option>
           <option value="Minas Gerais">Minas Gerais</option>
+          <option value="Espirito Santo">Espirito Santo</option>
+
         </select>
 
 
         {/* valor região é uma váriavel que tem uma função para quando o valor mudar  */}
         <select className="respostas2" value={regiao} onChange={handleRegiaoChange}>
-          <option value="escolha2">Escolha a região</option>
+          <option value="">Escolha a região</option>
           <option value="Zona Sul">Zona Sul</option>
           <option value="Zona Norte">Zona Norte</option>
           <option value="Zona Leste">Zona Leste</option>
@@ -153,12 +155,13 @@ function RightSide() {
 
         {/* valor local é uma váriavel que tem uma função para quando o valor mudar  */}
         <select className="respostas3" value={local} onChange={handleLocalChange}>
-          <option value="escolha3">Escolha o lugar</option>
-          <option value="Restaurante Japones">Restaurante Japones</option>
+          <option value="">Escolha o lugar</option>
+          <option value="Restaurante de comida Japonesa">Restaurante de comida Japonesa</option>
+          <option value="Restaurante italiano">Restaurante italiano</option>
+          <option value="Restaurante vegano">Restaurante vegano</option>
+          <option value="Churrascaria">Churrascaria</option>
           <option value="Hambuergueria">Hambuergueria</option>
           <option value="Fast Food">Fast Food</option>
-          <option value="Churrascaria">Churrascaria</option>
-          <option value="Restaurantes no geral">Restaurantes no geral</option>
           <option value="Bistro">Bistro</option>
           <option value="Barzinho">Barzinho</option>
         </select>
