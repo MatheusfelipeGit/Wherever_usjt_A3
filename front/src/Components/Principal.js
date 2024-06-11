@@ -160,7 +160,7 @@ function RightSide() {
           <option value="Restaurante italiano">Restaurante italiano</option>
           <option value="Restaurante vegano">Restaurante vegano</option>
           <option value="Churrascaria">Churrascaria</option>
-          <option value="Hambuergueria">Hambuergueria</option>
+          <option value="Hamburgueria">Hamburgueria</option>
           <option value="Fast Food">Fast Food</option>
           <option value="Bistro">Bistro</option>
           <option value="Barzinho">Barzinho</option>
