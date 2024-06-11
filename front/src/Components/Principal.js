@@ -49,7 +49,9 @@ function RightSide() {
   // Definição dos estados
   const [prompt, setPrompt] = useState(''); // Pergunta
   const [completion, setCompletion] = useState(''); // Resposta
-
+  const [estado, setEstado] = useState('');
+  const [regiao, setRegiao] = useState('');
+  const [local, setLocal] = useState('');
   const [message, setMessage] = useState('');
   const [response, setResponse] = useState('');
 
@@ -64,17 +66,33 @@ function RightSide() {
     }
   };
 
+// cada um tem seu handlechange para as mudanças
+  const handleEstadoChange = (e) => {
+    setEstado(e.target.value);
+  };
+
+  const handleRegiaoChange = (e) => {
+    setRegiao(e.target.value);
+  };
+
+  const handleLocalChange = (e) => {
+    setLocal(e.target.value);
+  };
+
+
+
   // Função para enviar a pergunta e obter a resposta do GPT
   const enviar = async () => {
+    //deixa uma pergunta semi pronta, o que muda é os ${} - interpolação de string 
+    const fullPrompt = `Me fale um(a) ${local} na ${regiao} de ${estado}`;
     try {
-      const response = await axios.post('http://localhost:4000/chatgpt', { prompt });
+      const response = await axios.post('http://localhost:4000/chatgpt', { prompt: fullPrompt });
       console.log(response.data); // Verificar o formato da resposta no console
       setCompletion(response.data.completion);
-  
-      // Verifica se a variável 'prompt' está definida
-      if (prompt) {
+
+      if (fullPrompt) {
         try {
-          await axios.put('http://localhost:3033/mensagens', { question: prompt, answer: response.data.completion });
+          await axios.put('http://localhost:3033/mensagens', { question: fullPrompt, answer: response.data.completion });
         } catch (error) {
           console.error(error); // Certifique-se de que os erros estão sendo tratados corretamente
         }
@@ -94,30 +112,61 @@ function RightSide() {
       <div className="steps">
         <p className="step">
           <span className="step-number">1.</span>
-          <span className="step-text">Está pensando em sair para algum lugar e não conhece sobre? Pode ficar tranquilo. No nosso site você pode consultar alguns dos feedbacks de restaurantes badalados!</span>
+          <span className="step-text">Está pensando em sair para algum lugar e não conhece sobre? Pode ficar tranquilo. No nosso site você pode procurar algum local gastronomico dentro das regigões selecionadas!</span>
         </p>
         <p className="step">
           <span className="step-number">2.</span>
-          <span className="step-text">Sabe aquele restaurante que você quer conhecer mais sobre! Basta você fazer a pergunta para conhecer e descobrir se realmente é o seu estilo</span>
+          <span className="step-text">Sabe aquela duvida entre lugares para ir? A Wherever consegue te ajudar de forma simples e rápida!</span>
         </p>
         <p className="step">
           <span className="step-number">3.</span>
-          <span className="step-text">Basta você realizar sua pergunta no campo abaixo! A pergunta deve começar com "Conte um pouco mais sobre..." e logo após a localidade.</span>
-        </p>
-        <p className="step">
-          <span className="step-number">4.</span>
-          <span className="step-text">Segue o exemplo! "Conte uma pouco mais sobre o Outback do Anália Franco!" dessa maneira você recebe um breve resumo da localidade e oque o restaurante pode oferecer, como os pratos servidos e o estilo de decoração único que o local oferece!</span>
+          <span className="step-text">Basta você selecionar seu Estado, depois sua Região e por último mas não menos importante, selecionar o local que deseja ir. Após isso só clicar em "buscar" e aguardar os resultados!</span>
         </p>
         {/* Adicione mais etapas conforme necessário */}
       </div>
     </section>  
 
       {/* Input e botão para enviar a pergunta */}
-      <h1 className="digite-a-pergunta">Digite a pergunta</h1>
-      <label className="respostas">
-         <input className="perguntas-chat"type="text" value={prompt} onChange={(e) => setPrompt(e.target.value)} />
-      </label>
-      <button className="botao-perguntar" onClick={enviar}>Perguntar</button>
+      <h1 className="digite-a-pergunta">Monte sua pergunta:</h1>
+
+      <div className="answers">
+      {/* valor estado é uma váriavel que tem uma função para quando o valor mudar  */}
+          <select className="respostas1" value={estado} onChange={handleEstadoChange}>
+                
+          <option value="">Escolha o Estado</option> 
+          <option value="São Paulo">São Paulo</option>
+          <option value="Rio de Janeiro">Rio de Janeiro</option>
+          <option value="Minas Gerais">Minas Gerais</option>
+        </select>
+
+
+        {/* valor região é uma váriavel que tem uma função para quando o valor mudar  */}
+        <select className="respostas2" value={regiao} onChange={handleRegiaoChange}>
+          <option value="escolha2">Escolha a região</option>
+          <option value="Zona Sul">Zona Sul</option>
+          <option value="Zona Norte">Zona Norte</option>
+          <option value="Zona Leste">Zona Leste</option>
+          <option value="Zona Oeste">Zona Oeste</option>
+          <option value="Centro">Centro</option>
+        </select>
+
+
+        {/* valor local é uma váriavel que tem uma função para quando o valor mudar  */}
+        <select className="respostas3" value={local} onChange={handleLocalChange}>
+          <option value="escolha3">Escolha o lugar</option>
+          <option value="Restaurante Japones">Restaurante Japones</option>
+          <option value="Hambuergueria">Hambuergueria</option>
+          <option value="Fast Food">Fast Food</option>
+          <option value="Churrascaria">Churrascaria</option>
+          <option value="Restaurantes no geral">Restaurantes no geral</option>
+          <option value="Bistro">Bistro</option>
+          <option value="Barzinho">Barzinho</option>
+        </select>
+
+        <button className="botao-perguntar" onClick={enviar}>Perguntar</button>
+        </div>
+      
+
       <textarea className="respostas-chat" type="text" value={completion} readOnly />
       
       <div id="dicas-locais">

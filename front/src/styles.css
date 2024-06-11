@@ -84,6 +84,12 @@ body {
 }
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------- */
+.answers{
+  padding: 10%;
+  margin-left: 3%;
+  align-items: center;
+}
+
 .digite-a-pergunta{
   color: #177da5;
   text-shadow:
@@ -98,14 +104,88 @@ body {
   font-style: normal;
 }
 
-.respostas{
-  align-items: center;
-  margin-left: 5px;
+.respostas1{
+  text-align: center;
+  margin-left: 1%;
+  -webkit-appearance: none;
+  /* Remove estilo padrão do Chrome */
+  -moz-appearance: none;
+  /* Remove estilo padrão do FireFox */
+  appearance: none;
+  /* Remove estilo padrão do FireFox*/
+  background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+  /* Imagem de fundo (Seta) */
+  background-position: 218px center;
+  /*Posição da imagem do background*/
+  width: 250px;
+  /* Tamanho do select, maior que o tamanho da div "div-select" */
+  height: 30px;
+  /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+  border: 1px solid #ddd;
+  
 }
+
+.respostas2{
+  text-align: center;
+  margin-left: 1%;
+  -webkit-appearance: none;
+  /* Remove estilo padrão do Chrome */
+  -moz-appearance: none;
+  /* Remove estilo padrão do FireFox */
+  appearance: none;
+  /* Remove estilo padrão do FireFox*/
+  background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+  /* Imagem de fundo (Seta) */
+  background-position: 218px center;
+  /*Posição da imagem do background*/
+  width: 250px;
+  /* Tamanho do select, maior que o tamanho da div "div-select" */
+  height: 30px;
+  /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+  border: 1px solid #ddd;
+}
+.respostas3{
+  text-align: center;
+  margin-left: 1%;
+  -webkit-appearance: none;
+  /* Remove estilo padrão do Chrome */
+  -moz-appearance: none;
+  /* Remove estilo padrão do FireFox */
+  appearance: none;
+  /* Remove estilo padrão do FireFox*/
+  background: url(http://www.webcis.com.br/images/imagens-noticias/select/ico-seta-appearance.gif) no-repeat #eeeeee;
+  /* Imagem de fundo (Seta) */
+  background-position: 218px center;
+  /*Posição da imagem do background*/
+  width: 250px;
+  /* Tamanho do select, maior que o tamanho da div "div-select" */
+  height: 30px;
+  /* Altura do select, importante para que tenha a mesma altura em todo os navegadores */
+  border: 1px solid #ddd;
+}
+
+.botao-perguntar{
+  background-color: #ffffff; /* Cor de fundo */
+  color: rgb(0, 0, 0); /* Cor do texto */
+  padding: 5px 20px; /* Preenchimento */
+  font-size: 16px; /* Tamanho da fonte */
+  border: none; /* Sem borda*/
+  cursor: pointer; /* Cursor de apontador */
+  border-radius: 5px; /*Bordas arredondadas */
+  transition: background-color 0.4s; /* Transição suave para a cor de fundo */
+  margin-right: 10px;
+  margin-left: 3%; /* Adiciona uma margem à direita para separar o botão do texto de localização */
+}
+
+.botao-perguntar:hover{
+  background-color: #1100ff;;
+}
+
+
 .respostas-chat{
   
   width: 95%;
-  margin-left: 5px;
+  margin-left: 4%;
   border: none;
   font-size: 15px;
   outline: none;
@@ -127,22 +207,7 @@ body {
   outline-color: #415bf0;
 }
 
-.botao-perguntar{
-  background-color: #ffffff; /* Cor de fundo */
-  color: rgb(0, 0, 0); /* Cor do texto */
-  padding: 5px 20px; /* Preenchimento */
-  font-size: 16px; /* Tamanho da fonte */
-  border: none; /* Sem borda*/
-  cursor: pointer; /* Cursor de apontador */
-  border-radius: 5px; /*Bordas arredondadas */
-  transition: background-color 0.4s; /* Transição suave para a cor de fundo */
-  margin-right: 10px;
-  margin-left: 10px; /* Adiciona uma margem à direita para separar o botão do texto de localização */
-}
 
-.botao-perguntar:hover{
-  background-color: #177da5;;
-}
 
 
 /*-----------------------------------------------------------------------------------------------------------------------------------------------/
@@ -221,7 +286,7 @@ body {
 }
 
 h2.titulo {
-  color: #177da5;
+  color:#79A1FF;
   text-shadow:
     1.5px 1.5px 0 #000,
     -1.5px 1.5px 0 #000,
@@ -305,7 +370,7 @@ h2.sub-titulo {
   font-family: "Krona One", sans-serif;
   font-weight: 200;
   font-style: italic;/* Fonte */
-  color: #177da5;
+  color:#79A1FF;
   text-shadow:
     1.5px 1.5px 0 #000,
     -1.5px 1.5px 0 #000,
@@ -325,7 +390,7 @@ h2.sub-titulo {
   font-family: "Krona One", sans-serif;
   font-weight: 200;
   font-style: italic;/* Fonte */
-  color: #177da5;
+  color: #79A1FF;
   text-shadow:
     1.5px 1.5px 0 #000,
     -1.5px 1.5px 0 #000,
@@ -334,9 +399,11 @@ h2.sub-titulo {
   transition: 0.4s; /* Transição suave */
 } 
 
-.atalhos button:hover{
-  color: #00ddff; /* Cor do texto ao passar o mouse */
-  transition: 0.3s; /* Transição suave */
+.atalho1 button:hover{
+  transform: scale(1.04);
+}
+.atalho2 button:hover{
+  transform: scale(1.04);
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -386,7 +453,7 @@ h2.sub-titulo {
   font-weight: 400;
   font-style: normal;
   font-size: 40px; /* Tamanho da fonte */
-  color: #177da5;
+  color: #79A1FF;
   text-shadow:
     1.5px 1.5px 0 #000,
     -1.5px 1.5px 0 #000,
@@ -423,7 +490,7 @@ h2.sub-titulo {
 /* /estilo de todos os titulos/ */
 
 .right-side h1 {
-  color: #177da5;
+  color: #79A1FF;
   text-shadow:
     1.5px 1.5px 0 #000,
     -1.5px 1.5px 0 #000,
