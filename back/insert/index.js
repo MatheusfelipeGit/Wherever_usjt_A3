@@ -13,9 +13,9 @@ app.put("/mensagens", (req, res ) => {
     const {question, answer } = req.body;
 
     const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'root',
+    host: 'whereverdb.cz6g6mm86r5c.sa-east-1.rds.amazonaws.com',
+    user: 'admin',
+    password: '2781046609Ma',
     database: 'WhereverOfc'
     });
     //if caso de erro, para saber onde o erro está
