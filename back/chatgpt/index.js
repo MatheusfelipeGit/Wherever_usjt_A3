@@ -4,7 +4,7 @@ const { OpenAI } = require('openai');
 const openai = new OpenAI(OPENAI_API_KEY);
 
 //importando o express
-const express = require('express');
+ const express = require('express');
 const cors = require('cors');
 const app = express();
 app.use(express.json());

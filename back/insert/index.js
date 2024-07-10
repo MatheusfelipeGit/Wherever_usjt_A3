@@ -3,12 +3,12 @@ const mysql = require("mysql2");//esse require é tipo um import
 const app = new express();//esse require é tipo um import
 const cors = require("cors");
 
-app.use(express.json()); 
+ app.use(express.json()); 
 
-app.use(cors());
+ app.use(cors());
 
 //esse app é responsável por fazer o put no banco de dados e faz a conexão também 
-app.put("/mensagens", (req, res ) => {
+ app.put("/mensagens", (req, res ) => {
 
     const {question, answer } = req.body;
 
@@ -50,8 +50,8 @@ app.put("/mensagens", (req, res ) => {
 });
 
 //rodando na porta 3033
-const porta = 3033;
-app.listen(porta, () => console.log (`Executando na porta ${porta}`));
+ const porta = 3033;
+ app.listen(porta, () => console.log (`Executando na porta ${porta}`));
 
 
 // inicia o localhost http://localhost:3033/mensagens
